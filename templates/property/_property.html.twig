@@ -1,10 +1,14 @@
-{% extends 'base.html.twig' %}
-
-{% block body %}
-
-{% endblock %}
-
-{% block title %}
-
-{% endblock %}
+<div class="card" style="margin-bottom: 4px;">
+    <div class="card-body">
+       <h5 class="card-title">
+           <a href="{{ path('property.show', {id: property.id, slug: property.slug}) }}">
+               {{ property.title }}
+           </a>
+       </h5>
+        <p class="card-text">{{ property.surface }} m² - {{ property.city }} ({{ property.postalCode }})</p>
+        <div class="text-primary" style="font-size: 2rem; font-weight: bold;">
+            {{ property.formatedPrice }} €
+        </div>
+    </div>
+</div>
 
