@@ -1,7 +1,7 @@
 
 {% extends 'base.html.twig' %}
 
-{% block title ' Gerer les maisons '%}
+{% block title ' Artikel verwalten '%}
 
 {% block stylesheets %}
 
@@ -13,7 +13,7 @@
 
   <div class="container">
 
-      <h1>Gerer les maisons</h1>
+      <h1>Artikel verwalten</h1>
 
       {% for message in app.flashes('success') %}
         <div class="alert alert-success">
@@ -24,8 +24,8 @@
       <table class="table table-striped">
           <thead>
             <tr>
-                <th>Titre</th>
-                <th>Actions</th>
+                <th>Titel</th>
+                <th>Aktionen</th>
             </tr>
           </thead>
           <tbody>
@@ -33,12 +33,12 @@
           <tr>
               <td>{{ property.title }}</td>
               <td>
-                  <a href="{{ path('admin.property.edit', {id: property.id}) }}" class="btn btn-secondary">Editer</a>
+                  <a href="{{ path('admin.property.edit', {id: property.id}) }}" class="btn btn-secondary">Mofifizieren</a>
                   <form method="post" action="{{ path('admin.property.delete', {id: property.id}) }}" style="display: inline-block;"
                   onsubmit="return confirm('Etes-vous sur ???')">
                       <input type="hidden" name="_method" value="DELETE">
                       <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ property.id) }}">
-                      <button class="btn btn-danger">Supprimer</button>
+                      <button class="btn btn-danger">löschen</button>
                   </form>
               </td>
           </tr>
@@ -47,7 +47,7 @@
       </table>
 
       <div class="text-right">
-          <a href="{{ path('admin.property.new') }}" class="btn btn-primary">Creer une nouvelle maison</a>
+          <a href="{{ path('admin.property.new') }}" class="btn btn-primary">Artikel erstellen</a>
       </div>
   </div>
 {% endblock %}

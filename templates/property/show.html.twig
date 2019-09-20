@@ -28,7 +28,7 @@
                      <h1>{{ property.title }}</h1>
                      <h2>{{ property.rooms }} pieces - {{ property.surface }} m²</h2>
                      <div class="text-primary" style="font-size: 4em; font-weight: bold;">{{ property.formatedPrice }}</div>
-                     <a href="#" class="btn btn-primary">Contacter l'agence</a>
+                     <a href="#" class="btn btn-primary">Agentur kontaktieren</a>
                      <div id="contactForm" class="" style="margin-top: -4px;">
                          {{ form_start(form) }}
                             <div class="row">
@@ -56,28 +56,28 @@
 
             <div class="row">
                 <div class="col-md-8">
-                    <h2>Caracteristiques</h2>
+                    <h2>Eigenschaften</h2>
                     <table class="table table-striped">
                         <tr>
-                            <td>Surface habitable</td>
+                            <td>Wohnbereich</td>
                             <td>{{ property.surface }} m²</td>
                         </tr>
                         <tr>
-                            <td>Pieces</td>
+                            <td>Zimmer</td>
                             <td>{{ property.rooms }}</td>
                         </tr>
                         <tr>
-                            <td>Etage</td>
+                            <td>Treppen</td>
                             <td>{{ property.floor }}</td>
                         </tr>
                         <tr>
-                            <td>Chauffage</td>
+                            <td>Heizung</td>
                             <td>{{ property.heatType }}</td>
                         </tr>
                     </table>
                 </div>
                 <div class="col-md-4">
-                    <h2>Specificites</h2>
+                    <h2>Besonderheiten</h2>
                     <ul class="list-group">
                         {% for option in property.options %}
                             <li class="list-group-item">{{ option.name }}</li>

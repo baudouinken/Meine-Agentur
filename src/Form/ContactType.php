@@ -6,6 +6,7 @@ use App\Entity\Contact;
 use App\Entity\Option;
 use App\Entity\PropertySearch;
 
+use libs\RecaptchaBundle\Type\RecaptchaSubmitType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -26,6 +27,7 @@ class ContactType extends AbstractType
         ->add('phone', TextType::class)
         ->add('email', EmailType::class)
         ->add('message', TextareaType::class)
+
         ;
     }
 
